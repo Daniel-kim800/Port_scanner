@@ -2,7 +2,7 @@
  
 import socket
 ip =input ("enter the IP address: ")
-port = input ("Enter the port Number: ")
+port = int(input ("Enter the port Number: ")) #The sock.connect_ex method requires port to be of type int
 sock = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
 
 if sock.connect_ex((ip,port)):
